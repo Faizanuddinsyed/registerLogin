@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Register() {
   const [name, setName] = useState();
@@ -21,6 +22,11 @@ function Register() {
 
   return (
     <>
+
+    <div>
+      <Navbar/>
+    </div>
+    <div>
       <form>
         <h2>Register Form</h2>
         <div className="form-group">
@@ -64,6 +70,7 @@ function Register() {
           Submit
         </button>
       </form>
+      </div>
       <p>Already have an account</p>
       <Link to="/login">Login</Link>
     </>

@@ -2,8 +2,12 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function Login() {
+
+  
+
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const navigate = useNavigate();
@@ -26,7 +30,13 @@ function Login() {
 
   return (
     <>
+      <div>
+      <Navbar/>
+      </div>
+
       <form>
+
+        
         <h2>Login Form</h2>
         <div className="form-group">
           <label>Email address</label>
